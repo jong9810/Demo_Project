@@ -5,6 +5,7 @@
     <title>main</title>
 </head>
 <body>
+<div th:replace="~{fragments/bodyHeader :: bodyHeader}"></div>
 <h1>메인 페이지</h1>
 <form action="/member/login" method="get">
   <input type="submit" value="로그인하러 가기"/>
@@ -12,8 +13,12 @@
 <form action="/member/join" method="get">
     <input type="submit" value="회원가입하러 가기"/>
 </form>
+<form action="/member" method="get">
+    <input type="submit" value="회원 목록 페이지"/>
+</form>
 <form action="/board" method="get">
   <input type="submit" value="게시글 목록 페이지"/>
 </form>
+<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.example.demo.repository.board;
+package com.example.demo.board.repository;
 
 import com.example.demo.board.repository.BoardRepository;
 import com.example.demo.entity.Board;

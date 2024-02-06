@@ -10,10 +10,10 @@
         td, th {
             border: 1px solid black;
         }
-
     </style>
 </head>
 <body>
+<div th:replace="~{fragments/bodyHeader :: bodyHeader}"></div>
 <h1>게시글 목록 페이지</h1>
 <table>
     <thead>
@@ -36,5 +36,6 @@
 <form method="get" action="/board/new">
     <input type="submit" value="글쓰기"/>
 </form>
+<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

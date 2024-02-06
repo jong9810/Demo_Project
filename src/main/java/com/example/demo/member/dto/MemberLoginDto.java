@@ -1,5 +1,6 @@
 package com.example.demo.member.dto;
 
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 @Getter
@@ -8,7 +9,9 @@ import lombok.*;
 @AllArgsConstructor
 public class MemberLoginDto {
 
-    public String memberId;
+    @NotEmpty(message = "ID를 입력해주세요.")
+    private String memberId;
 
-    public String pw;
+    @NotEmpty(message = "PW를 입력해주세요.")
+    private String pw;
 }

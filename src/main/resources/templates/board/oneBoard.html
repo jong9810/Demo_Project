@@ -5,6 +5,7 @@
     <title>one board</title>
 </head>
 <body>
+<div th:replace="~{fragments/boardBodyHeader :: boardBodyHeader}"></div>
 <h1>게시글 조회 페이지</h1>
 <form th:object="${oneBoard}">
     <div>
@@ -36,5 +37,6 @@
         <button type="submit">삭제</button>
     </form>
 </div>
+<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

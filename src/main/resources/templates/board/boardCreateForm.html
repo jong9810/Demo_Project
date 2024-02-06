@@ -5,6 +5,7 @@
     <title>board write form</title>
 </head>
 <body>
+<div th:replace="~{fragments/boardBodyHeader :: boardBodyHeader}"></div>
 <h1>게시글 작성 폼</h1>
 <form method="post" action="/board/new" th:object="${boardCreateDto}">
     <div>
@@ -21,5 +22,6 @@
     </div>
     <button type="submit">작성완료</button>
 </form>
+<div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

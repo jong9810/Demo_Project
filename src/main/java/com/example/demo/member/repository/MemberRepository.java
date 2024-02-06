@@ -10,6 +10,8 @@ public interface MemberRepository {
 
     Member findById(Long id);
 
+    Member findByMemberId(String memberId);
+
     List<Member> findAll();
 
     Long delete(Member member);

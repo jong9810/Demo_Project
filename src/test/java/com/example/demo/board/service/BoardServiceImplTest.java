@@ -1,4 +1,4 @@
-package com.example.demo.service.impl;
+package com.example.demo.board.service;
 
 import com.example.demo.board.dto.BoardUpdateDto;
 import com.example.demo.entity.Board;
