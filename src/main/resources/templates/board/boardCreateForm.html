@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>board write form</title>
+</head>
+<body>
+<h1>게시글 작성 폼</h1>
+<form method="post" action="/board/new" th:object="${boardCreateDto}">
+    <div>
+        <label th:for="title">제목 : </label>
+        <input type="text" th:field="*{title}"/>
+    </div>
+    <div>
+        <label th:for="writer">작성자 : </label>
+        <input type="text" th:field="*{writer}"/>
+    </div>
+    <label th:for="content">내용 : </label>
+    <div>
+        <textarea th:field="*{content}"></textarea>
+    </div>
+    <button type="submit">작성완료</button>
+</form>
+</body>
+</html>

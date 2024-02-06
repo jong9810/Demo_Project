@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>board list</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<h1>게시글 목록 페이지</h1>
+<table>
+    <thead>
+        <tr>
+            <th>글번호</th>
+            <th>글제목</th>
+            <th>작성자</th>
+            <th>조회수</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="board : ${boardList}">
+            <td th:text="${board.id}">1</td>
+            <td><a th:href="@{/board/{id}(id = ${board.id})}" th:text="${board.title}">안녕하세요</a></td>
+            <td th:text="${board.content}">admin</td>
+            <td th:text="${board.views}">10</td>
+        </tr>
+    </tbody>
+</table>
+<form method="get" action="/board/new">
+    <input type="submit" value="글쓰기"/>
+</form>
+</body>
+</html>
